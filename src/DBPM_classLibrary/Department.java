@@ -13,7 +13,7 @@ public class Department {
     public Department(int number, String name) {
         setNumber(number);
         setName(name);
-        employees = new ArrayList<Employee>();
+        employees = new ArrayList<>();
     }
 
     public int getNumber() {
@@ -33,8 +33,10 @@ public class Department {
     }
 
     public void addEmployee(Employee newEmployee) {
-        employees.add(newEmployee);
-        newEmployee.setDepartment(this);
+        if (!employees.contains(newEmployee)) {
+            employees.add(newEmployee);
+            newEmployee.setDepartment(this);
+        }
     }
 
     public void removeEmployee(Employee employee) {

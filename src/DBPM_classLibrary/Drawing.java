@@ -74,4 +74,17 @@ public class Drawing {
     public List<Project> getListOfProjects(){
         return usedInProjects;
     }
+
+    @Override
+    public String toString() {
+        return "Drawing{" +
+                "decimalNumber='" + decimalNumber + '\'' +
+                ", developer=" + developer +
+                ", usedInProjects=" + usedInProjects +
+                ", isArchived=" + isArchived +
+                ", startDate=" + startDate +
+                ", releaseDate=" + releaseDate +
+                ", mainProject=" + mainProject +
+                '}';
+    }
 }

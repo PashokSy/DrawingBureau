@@ -16,6 +16,8 @@ public class Engineer extends Employee {
         setProject(project);
         setRank(3);
         this.rankNumber = 3;
+
+        project.addEngineer(this);
     }
 
     public Engineer(String name, String secondName, Department department, Project project, int rankNumber) {
@@ -23,6 +25,8 @@ public class Engineer extends Employee {
         setProject(project);
         setRank(rankNumber);
         this.rankNumber = rankNumber;
+
+        project.addEngineer(this);
     }
 
     protected Engineer(String name, String secondName, Department department){

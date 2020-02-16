@@ -2,6 +2,7 @@ package DBPM_classLibrary;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Employee {
     private IdCard idCard;
@@ -15,7 +16,6 @@ public class Employee {
         setName(name);
         setSecondName(secondName);
         setDepartment(department);
-
         department.addEmployee(this);
     }
 
@@ -149,6 +149,8 @@ public class Employee {
 
         Employee employee2 = new Employee("Lesha", "Hzshkin", dp);
         employee2.setRoom(13);
+
+        System.out.println(dp);
 
         Employee employee3 = new Employee("Kolya", "Vasilev");
         employee3.setRoom(room);
