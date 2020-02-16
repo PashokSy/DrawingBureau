@@ -1,5 +1,6 @@
 package DBPM_classLibrary;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Employee {
@@ -116,10 +117,14 @@ public class Employee {
         }
 
         string.append("IdCard: ");
-        if(getIdCard() == null){
+        if (getIdCard() == null) {
             string.append("no id card");
         } else {
             string.append(getIdCard().getNumber()).append('\n');
+        }
+
+        if (isOnProject()) {
+            string.append("Project: ").append(project.getName()).append('\n');
         }
 
         return string.toString();
@@ -129,6 +134,7 @@ public class Employee {
         IdCard card = new IdCard(482);
         Room room = new Room(74);
         Department dp = new Department(94, "Mechanical department");
+        Department dp2 = new Department(14, "Metrology department");
 
         Employee employee = new Employee("Vasya", "Pyatochkin", dp);
         employee.moveToRoom(45);
@@ -137,6 +143,9 @@ public class Employee {
         employee1.setRoom(95);
         employee1.moveToRoom(room);
         employee1.setIdCard(card);
+        employee1.moveToProject(
+                new Project("Protazan", LocalDate.of(2021, 6, 21), 7)
+        );
 
         Employee employee2 = new Employee("Lesha", "Hzshkin", dp);
         employee2.setRoom(13);
@@ -144,6 +153,9 @@ public class Employee {
         Employee employee3 = new Employee("Kolya", "Vasilev");
         employee3.setRoom(room);
         employee3.setIdCard(new IdCard(322));
+        employee3.moveToDepartment(dp);
+        employee3.moveToDepartment(dp2);
+        employee.moveToDepartment(dp2);
 
         ArrayList<Employee> e = new ArrayList<>();
         e.add(employee);
