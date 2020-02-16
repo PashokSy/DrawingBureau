@@ -10,6 +10,8 @@ public class Department {
     private String name;
     private List<Employee> employees;
 
+    public Department(){}
+
     public Department(int number, String name) {
         setNumber(number);
         setName(name);

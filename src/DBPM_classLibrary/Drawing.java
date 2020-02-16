@@ -13,6 +13,8 @@ public class Drawing {
     private LocalDate releaseDate;
     private Project mainProject;
 
+    public Drawing(){}
+
     public Drawing(String decimalNumber, LocalDate releaseDate, Project mainProject) {
         setDecimalNumber(decimalNumber);
         setReleaseDate(releaseDate);

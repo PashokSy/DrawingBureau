@@ -9,6 +9,9 @@ public class MajorEngineer extends Engineer {
     private List<Project> doneProjects;
     private List<Engineer> subordinates;
 
+    public MajorEngineer() {
+    }
+
     public MajorEngineer(String name, String secondName, Department department) {
         super(name, secondName, department);
 

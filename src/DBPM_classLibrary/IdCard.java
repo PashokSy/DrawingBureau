@@ -6,6 +6,8 @@ public class IdCard {
     private int number;
     private String dateExpire;
 
+    public IdCard(){}
+
     public IdCard(int number) {
         String date = LocalDate.now().plusDays(365).toString();
 

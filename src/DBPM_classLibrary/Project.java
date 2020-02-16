@@ -14,6 +14,8 @@ public class Project {
     private int engineersNeedCount;
     private boolean isArchived;
 
+    public Project(){}
+
     public Project(String name, LocalDate releaseDate, int engineersNeedCount) {
         setName(name);
         setReleaseDate(releaseDate);

@@ -3,6 +3,8 @@ package DBPM_classLibrary;
 public class Room {
     private int number;
 
+    public Room(){}
+
     public Room(int number) {
         setNumber(number);
     }

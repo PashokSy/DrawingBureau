@@ -12,6 +12,8 @@ public class Engineer extends Employee {
     private String rank;
     private int rankNumber;
 
+    public Engineer(){}
+
     public Engineer(String name, String secondName, Department department, Project project) {
         super(name, secondName, department);
         setProject(project);

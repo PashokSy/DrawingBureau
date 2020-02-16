@@ -12,6 +12,8 @@ public class Employee {
     private Room room;
     private Project project;
 
+    public Employee(){}
+
     public Employee(String name, String secondName, Department department) {
         setName(name);
         setSecondName(secondName);
