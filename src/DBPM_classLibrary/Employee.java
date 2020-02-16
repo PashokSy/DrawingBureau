@@ -63,7 +63,7 @@ public class Employee {
         this.room = room;
     }
 
-    public void setRoom(int number){
+    public void setRoom(int number) {
         this.setRoom(new Room(number));
     }
 
@@ -75,26 +75,23 @@ public class Employee {
         this.project = project;
     }
 
-    public void moveToProject(Project project){
+    public void moveToProject(Project project) {
         this.project = project;
     }
 
-    public boolean isOnProject(){
-        if (this.project != null)
-            return true;
-        else
-            return false;
+    public boolean isOnProject() {
+        return (this.project != null);
     }
 
-    public void moveToRoom(Room room){
+    public void moveToRoom(Room room) {
         this.setRoom(room);
     }
 
-    public void moveToRoom(int number){
+    public void moveToRoom(int number) {
         this.setRoom(number);
     }
 
-    public void moveToDepartment(Department department){
+    public void moveToDepartment(Department department) {
         this.setDepartment(department);
     }
 
@@ -112,10 +109,17 @@ public class Employee {
         }
 
         string.append("Room: ");
-        if (getRoom() == null){
+        if (getRoom() == null) {
             string.append("no room");
         } else {
             string.append(getRoom().getNumber()).append('\n');
+        }
+
+        string.append("IdCard: ");
+        if(getIdCard() == null){
+            string.append("no id card");
+        } else {
+            string.append(getIdCard().getNumber()).append('\n');
         }
 
         return string.toString();
@@ -132,14 +136,16 @@ public class Employee {
         Employee employee1 = new Employee("Petya", "Proshkin", dp);
         employee1.setRoom(95);
         employee1.moveToRoom(room);
+        employee1.setIdCard(card);
 
         Employee employee2 = new Employee("Lesha", "Hzshkin", dp);
         employee2.setRoom(13);
 
         Employee employee3 = new Employee("Kolya", "Vasilev");
         employee3.setRoom(room);
+        employee3.setIdCard(new IdCard(322));
 
-        ArrayList<Employee> e = new ArrayList<Employee>();
+        ArrayList<Employee> e = new ArrayList<>();
         e.add(employee);
         e.add(employee1);
         e.add(employee2);
